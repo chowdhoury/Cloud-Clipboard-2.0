@@ -13,21 +13,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['code'])) {
     $response = ['success' => false, 'text' => '', 'file' => null, 'message' => ''];
 
     try {
-        // Validate code format
         if (!preg_match('/^[A-Z0-9]{5}$/', $code)) {
             throw new Exception('Invalid clipboard code format');
         }
 
         $hasContent = false;
 
-        // Check for text content
         $textFile = "uploads_text/" . $code . ".txt";
         if (file_exists($textFile)) {
             $response['text'] = file_get_contents($textFile);
             $hasContent = true;
         }
 
-        // Check for file content
         $fileMetadataPath = "uploads_files/" . $code . "_metadata.json";
         if (file_exists($fileMetadataPath)) {
             $metadata = json_decode(file_get_contents($fileMetadataPath), true);
@@ -65,7 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['code'])) {
     exit;
 }
 
-// Handle invalid requests
 http_response_code(400);
 echo json_encode(['success' => false, 'message' => 'Invalid request']);
 ?>

@@ -26,19 +26,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $response = ['success' => false, 'message' => '', 'code' => ''];
 
     try {
-        // Get the clipboard code
         $code = isset($_POST['code']) ? strtoupper(trim($_POST['code'])) : '';
         
         if (empty($code)) {
             $code = generateCode();
         }
 
-        // Validate code format
         if (!preg_match('/^[A-Z0-9]{5}$/', $code)) {
             throw new Exception('Invalid clipboard code format');
         }
 
-        // Handle text submission
         if (isset($_POST['text'])) {
             $text = $_POST['text'];
             $uploadText = "uploads_text/";
@@ -59,7 +56,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
-        // Handle file submission
         if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
             $uploadImage = "uploads_files/";
             
@@ -71,12 +67,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $fileName = $code . "_" . time() . "." . $fileInfo['extension'];
             $filePath = $uploadImage . $fileName;
 
-            // Validate file size (10MB limit)
             if ($_FILES['file']['size'] > 10 * 1024 * 1024) {
                 throw new Exception('File size exceeds 10MB limit');
             }
 
-            // Validate file type
             $allowedTypes = [
                 'image/jpeg', 'image/png', 'image/gif', 'image/bmp', 'image/webp', 'image/svg+xml',
                 'text/plain', 'text/markdown', 'text/rtf',
@@ -88,7 +82,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
 
             if (move_uploaded_file($_FILES['file']['tmp_name'], $filePath)) {
-                // Save file metadata
                 $metadata = [
                     'original_name' => $_FILES['file']['name'],
                     'file_path' => $fileName,
@@ -109,7 +102,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
-        // Clean expired entries (24 hours = 86400 seconds)
         cleanExpiredEntries("uploads_text/", 86400);
         cleanExpiredEntries("uploads_files/", 86400);
 
@@ -122,7 +114,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 }
 
-// Handle unsupported methods
 http_response_code(405);
 echo json_encode(['success' => false, 'message' => 'Method not allowed']);
 ?>

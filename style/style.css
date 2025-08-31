@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* Shared Style  */
 body {
   background-color: #ff6500;
   font-family: "Rubik", sans-serif;
@@ -18,7 +17,6 @@ body {
   margin-top: 60px;
 }
 
-/* Nav Section  */
 nav {
   display: flex;
   justify-content: space-between;
@@ -120,7 +118,6 @@ ul img:hover {
   margin-bottom: 60px;
 }
 
-/* Hero Section */
 .image-section {
   display: flex;
   align-items: center;
@@ -131,7 +128,6 @@ ul img:hover {
   filter: drop-shadow(10px 4px 10px rgba(0, 0, 0, 0.2));
 }
 
-/* Functional Section  */
 .functional-section .text-section {
   text-align: center;
   justify-items: center;
@@ -150,7 +146,6 @@ ul img:hover {
   text-align: center;
 }
 
-/* Functional Buttons */
 .functional-buttons {
   display: flex;
   justify-content: center;
@@ -166,7 +161,6 @@ ul img:hover {
 }
 .primary-button {
   width: 400px;
-  /* width: 100%; */
   padding: 15px 20px;
   background-color: #ffffff50;
   border: none;
@@ -217,7 +211,6 @@ ul img:hover {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Footer Section  */
 footer {
   text-align: center;
   padding-bottom: 20px;
@@ -258,7 +251,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Content HTML */
 .secret-code {
   background-color: #1e3e62;
   color: white;
@@ -346,7 +338,6 @@ textarea:focus {
   cursor: pointer;
 }
 
-/* Dark Mode Styles */
 .dark-mode {
   background-color: #1a1a1a;
   color: #ffffff;
@@ -429,10 +420,8 @@ textarea:focus {
   background-color: #4a90e2;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
   nav {
-    /* flex-direction: column; */
     align-items: center;
     padding: 10px;
   }

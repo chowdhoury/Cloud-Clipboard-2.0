@@ -1,24 +1,17 @@
-// Main page functionality for creating and joining clipboards
-
 document.addEventListener("DOMContentLoaded", function () {
   const createButton = document.querySelector(".primary-button");
   const joinButton = document.querySelector(".secondary-button");
   const joinInput = document.querySelector(".input-container input");
   const modeToggle = document.querySelector(".rotateImg");
 
-  // Create new clipboard functionality
   createButton.addEventListener("click", function () {
-    // Generate a random clipboard ID
     const clipboardId = generateClipboardId();
 
-    // Store the clipboard ID in localStorage for quick access
     localStorage.setItem("currentClipboardId", clipboardId);
 
-    // Redirect to content page with the new clipboard ID
     window.location.href = `content.html?id=${clipboardId}`;
   });
 
-  // Join existing clipboard functionality
   joinButton.addEventListener("click", function () {
     const clipboardId = joinInput.value.trim().toUpperCase();
 
@@ -32,31 +25,25 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // Store the clipboard ID in localStorage
     localStorage.setItem("currentClipboardId", clipboardId);
 
-    // Redirect to content page with the clipboard ID
     window.location.href = `content.html?id=${clipboardId}`;
   });
 
-  // Allow joining by pressing Enter in the input field
   joinInput.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
       joinButton.click();
     }
   });
 
-  // Dark/Light mode toggle
   modeToggle.addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
     const isDark = document.body.classList.contains("dark-mode");
     localStorage.setItem("darkMode", isDark);
 
-    // Rotate the mode icon
     this.style.transform = isDark ? "rotate(280deg)" : "rotate(130deg)";
   });
 
-  // Load saved theme preference
   const savedTheme = localStorage.getItem("darkMode");
   if (savedTheme === "true") {
     document.body.classList.add("dark-mode");
@@ -64,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Generate a random 5-character clipboard ID
 function generateClipboardId() {
   const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let result = "";
@@ -74,20 +60,16 @@ function generateClipboardId() {
   return result;
 }
 
-// Show notification to user
 function showNotification(message, type = "info") {
-  // Remove existing notifications
   const existingNotification = document.querySelector(".notification");
   if (existingNotification) {
     existingNotification.remove();
   }
 
-  // Create notification element
   const notification = document.createElement("div");
   notification.className = `notification ${type}`;
   notification.textContent = message;
 
-  // Add styles
   notification.style.cssText = `
         position: fixed;
         top: 20px;
@@ -105,7 +87,6 @@ function showNotification(message, type = "info") {
         }
     `;
 
-  // Add animation keyframes if not already added
   if (!document.querySelector("#notification-styles")) {
     const style = document.createElement("style");
     style.id = "notification-styles";
@@ -122,10 +103,8 @@ function showNotification(message, type = "info") {
     document.head.appendChild(style);
   }
 
-  // Add to DOM
   document.body.appendChild(notification);
 
-  // Auto-remove after 3 seconds
   setTimeout(() => {
     notification.style.animation = "slideOut 0.3s ease";
     setTimeout(() => {
