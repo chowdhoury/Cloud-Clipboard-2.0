@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header>
+        <ul class="mobile-menu">
+                <li class="control">
+                    <div>
+                        <img onclick="closeMenu()" src="./asset/close_menu.svg" alt="close Menu">
+                    </div>
+                    <div>
+                        <img class="rotateImg" src="./asset/mode.svg" alt="mode"></li>
+                    </div>
+                <li onclick="closeMenu()"><a href="#">Home</a></li>
+                <li onclick="closeMenu()"><a href="#">About</a></li>
+                <li onclick="closeMenu()"><a href="#">Updates</a></li>
+                <li onclick="closeMenu()"><a href="#">Feedback</a></li>
+            </ul>
+        <nav class="section-wide" id="marTop">
+            <img onclick="toggleMenu()" src="./asset/menu.svg" alt="menu Icon" class="menu-icon">
+            <div class="logo">
+                <figure>
+                    <a href="#"><img src="./asset/logo.png" alt="Logo"></a>
+                </figure>
+                <span class="logo-text">Cloud Clipboard</span>
+            </div>
+            <!-- <ul class="mobile-menu">
+                <li class="control">
+                    <div>
+                        <img src="./asset/close_menu.svg" alt="close Menu">
+                    </div>
+                    <div>
+                        <img class="rotateImg" src="./asset/mode.svg" alt="mode"></li>
+                    </div>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Updates</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul> -->
+            <ul class="nav-links">
+                <li><img src="./asset/mode.svg" alt="mode"></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Updates</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script src="./script/header-script.js"></script>
+</body>
+</html>

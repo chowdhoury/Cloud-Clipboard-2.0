@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Cloud Clipboard | Online Clipboard for Instant Text & Image Sharing |
+      Collaborative Board
+    </title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="icon" href="./asset/fav.png" type="image/png" />
+  </head>
+  <body>
+    <header>
+      <nav class="section-wide" id="marTop">
+        <div class="logo">
+          <figure>
+            <a href="index.html"><img src="./asset/logo.png" alt="Logo" /></a>
+          </figure>
+          <span class="logo-text">Cloud Clipboard</span>
+        </div>
+        <div class="secret-code">
+          <p>123456</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#ffffff"
+          >
+            <path
+              d="M680-80q-50 0-85-35t-35-85q0-6 3-28L282-392q-16 15-37 23.5t-45 8.5q-50 0-85-35t-35-85q0-50 35-85t85-35q24 0 45 8.5t37 23.5l281-164q-2-7-2.5-13.5T560-760q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-24 0-45-8.5T598-672L317-508q2 7 2.5 13.5t.5 14.5q0 8-.5 14.5T317-452l281 164q16-15 37-23.5t45-8.5q50 0 85 35t35 85q0 50-35 85t-85 35Zm0-80q17 0 28.5-11.5T720-200q0-17-11.5-28.5T680-240q-17 0-28.5 11.5T640-200q0 17 11.5 28.5T680-160ZM200-440q17 0 28.5-11.5T240-480q0-17-11.5-28.5T200-520q-17 0-28.5 11.5T160-480q0 17 11.5 28.5T200-440Zm480-280q17 0 28.5-11.5T720-760q0-17-11.5-28.5T680-800q-17 0-28.5 11.5T640-760q0 17 11.5 28.5T680-720Zm0 520ZM200-480Zm480-280Z"
+            />
+          </svg>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="section-wide attachment-section">
+        <div class="text-container">
+          <textarea
+            name=""
+            id=""
+            cols="auto"
+            rows=""
+            placeholder="Type or paste text here..."
+          ></textarea>
+          <div class="text-actions">
+            <button class="select-all-btn" title="Select">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#ffffff"
+              >
+                <path
+                  d="M252-252v-457h457v457H252Zm126-126h205v-205H378v205ZM212-212v126q-53 0-89.5-36.5T86-212h126ZM86-252v-126h126v126H86Zm0-165v-126h126v126H86Zm0-166v-126h126v126H86Zm126-165H86q0-53 36.5-89.5T212-874v126Zm40 662v-126h126v126H252Zm0-662v-126h126v126H252ZM417-86v-126h126v126H417Zm0-662v-126h126v126H417ZM583-86v-126h126v126H583Zm0-662v-126h126v126H583ZM748-86v-126h126q0 53-36.5 89.5T748-86Zm0-166v-126h126v126H748Zm0-165v-126h126v126H748Zm0-166v-126h126v126H748Zm0-165v-126q53 0 89.5 36.5T874-748H748Z"
+                />
+              </svg>
+            </button>
+            <button class="copy-btn" title="Copy">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#ffffff"
+              >
+                <path
+                  d="M774-215H374q-53 0-89.5-36.5T248-341v-484q0-53 36.5-89.5T374-951h266l260 260v350q0 53-36.5 89.5T774-215ZM574-625v-200H374v484h400v-284H574ZM168-9q-53 0-89.5-36.5T42-135v-548h126v548h449V-9H168Zm206-816v200-200 484-484Z"
+                />
+              </svg>
+            </button>
+            <button class="paste-btn" title="Paste">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#ffffff"
+              >
+                <path
+                  d="M212-86q-51.98 0-88.99-37.01T86-212v-536q0-51.97 37.01-88.99Q160.02-874 212-874h129q17-38 55.27-61.5Q434.55-959 480-959q45 0 83.5 23.5T620-874h128q51.97 0 88.99 37.01Q874-799.97 874-748v536q0 51.98-37.01 88.99Q799.97-86 748-86H212Zm0-126h536v-536h-73v136H285v-136h-73v536Zm268-551q17 0 28.5-11.5T520-803q0-17-11.5-28.5T480-843q-17 0-28.5 11.5T440-803q0 17 11.5 28.5T480-763Z"
+                />
+              </svg>
+            </button>
+            <button class="clear-btn" title="Clear">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#ffffff"
+              >
+                <path
+                  d="M269-86q-53 0-89.5-36.5T143-212v-497H80v-126h257v-63h284v63h259v126h-63v497q0 53-36.5 89.5T691-86H269Zm422-623H269v497h422v-497ZM342-281h103v-360H342v360Zm173 0h103v-360H515v360ZM269-709v497-497Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="file-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="48px"
+            viewBox="0 -960 960 960"
+            width="48px"
+            fill="#1e3e62"
+          >
+            <path
+              d="M252-135q-96.34 0-165.67-68.68Q17-272.35 17-368q0-84 50.5-151T201-600q24-100 102.17-162.5T482.29-825Q599-825 680.5-742.5 762-660 770-543v24q75 7 124 60.7 49 53.71 49 131.3 0 79.92-57.5 135.96Q828-135 749-135H539q-38.98 0-66.99-27.99Q444-190.97 444-229v-212l-88 89-51-50 175-176 176 176-52 50-88-89v212h233.36Q789-229 819-258.87T849-329q0-41-29.87-70.5T749-429h-72v-95q0-84.43-57.15-145.22Q562.71-730 478.47-730 392-730 335-665.5T278-513h-28q-58.27 0-98.64 40.81-40.36 40.81-40.36 101Q111-313 152.44-271t100.06 42H384v94H252Zm228-298Z"
+            />
+          </svg>
+          <p>Upload, paste or drag files here...</p>
+          <div class="file-actions">
+            <button title="Download">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#ffffff"
+              >
+                <path
+                  d="M874-694v482q0 53-36.5 89.5T748-86H212q-53 0-89.5-36.5T86-212v-536q0-53 36.5-89.5T212-874h482l180 180Zm-126 53L641-748H212v536h536v-429ZM480-252q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM252-548h360v-160H252v160Zm-40-93v429-536 107Z"
+                />
+              </svg>
+            </button>
+            <button class="clear-btn" title="Clear">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#ffffff"
+              >
+                <path
+                  d="M269-86q-53 0-89.5-36.5T143-212v-497H80v-126h257v-63h284v63h259v126h-63v497q0 53-36.5 89.5T691-86H269Zm422-623H269v497h422v-497ZM342-281h103v-360H342v360Zm173 0h103v-360H515v360ZM269-709v497-497Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section-wide section-top">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="borderLeft"><a href="#">About</a></li>
+        <li class="borderLeft"><a href="#">Privacy Policy</a></li>
+        <li class="borderLeft"><a href="#">Terms of Service</a></li>
+        <li class="borderLeft"><a href="#">Contact Us</a></li>
+      </ul>
+      <hr />
+      <p><small>&copy; 2025 Cloud Clipboard. All rights reserved.</small></p>
+    </footer>
+
+    <script src="./script/content-script.js"></script>
+  </body>
+</html>

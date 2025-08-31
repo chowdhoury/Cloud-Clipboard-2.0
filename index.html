@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Clipboard | Online Clipboard for Instant Text & Image Sharing | Collaborative Board</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="icon" href="./asset/fav.png" type="image/png">
+</head>
+<body>
+    <header>
+        <ul class="mobile-menu">
+            <li class="control">
+                <div>
+                    <img onclick="closeMenu()" src="./asset/close_menu.svg" alt="close Menu">
+                </div>
+                <div>
+                    <img class="rotateImg" src="./asset/mode.svg" alt="mode">
+                </div>
+            </li>
+            <li onclick="closeMenu()"><a href="#">Home</a></li>
+            <li onclick="closeMenu()"><a href="#">About</a></li>
+            <li onclick="closeMenu()"><a href="#">Updates</a></li>
+            <li onclick="closeMenu()"><a href="#">Feedback</a></li>
+        </ul>
+        <nav class="section-wide" id="marTop">
+            <img onclick="toggleMenu()" src="./asset/menu.svg" alt="menu Icon" class="menu-icon">
+            <div class="logo">
+                <figure>
+                    <a href="#"><img src="./asset/logo.png" alt="Logo"></a>
+                </figure>
+                <span class="logo-text">Cloud Clipboard</span>
+            </div>
+            <ul class="nav-links">
+                <li><img class="rotateImg" src="./asset/mode.svg" alt="mode"></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Updates</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <section class="section-wide image-section">
+            <!-- <img src="./asset/clipboard.webp" alt=""> -->
+            <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+            <dotlottie-wc src="https://lottie.host/c7363849-bc39-47c9-88f2-4bc27afb42cf/UVGh4V7fib.lottie" style="max-width: 400px;height: 400px" speed="1" autoplay loop></dotlottie-wc>
+        </section>
+        <section class="section-wide functional-section">
+            <div class="text-section">
+                <h1>Cloud Clipboard</h1>
+                <p>Share text and images instantly with Cloud Clipboard. No sign-up required, just copy and paste!</p>
+            </div>
+            <div class="functional-buttons">
+                <div>
+                    <p>Create a new Clipboard...</p>
+                    <button class="primary-button">Create Clipboard</button>
+                </div>
+                <div>
+                    <p>Join an existing Clipboard...</p>
+                    <div class="input-container">
+                        <input type="text" placeholder="Enter Clipboard ID">
+                        <button class="secondary-button">Join</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="section-wide section-top">
+        <ul class="footer-links">
+            <li><a href="#">About</a></li>
+            <li class="borderLeft"><a href="#">Privacy Policy</a></li>
+            <li class="borderLeft"><a href="#">Terms of Service</a></li>
+            <li class="borderLeft"><a href="#">Contact Us</a></li>
+        </ul>
+        <hr>
+        <p><small>&copy; 2025 Cloud Clipboard. All rights reserved.</small></p>
+    </footer>
+    <script src="./script/header-script.js"></script>
+    <script src="./script/main-script.js"></script>
+</body>
+</html>
